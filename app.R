@@ -1,9 +1,10 @@
 library(shiny)
 library(sensR)
+library(shinythemes)
 
 #defining UI
-ui <- fluidPage(
-  titlePanel("UX Statistical Power Calculator"),
+ui <- fluidPage(theme = shinytheme("superhero"),
+  titlePanel("Discrimination Statistical Power Calculator"),
   sidebarLayout(
     sidebarPanel(
       h2("Statistical Power"),
