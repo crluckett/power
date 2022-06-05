@@ -20,9 +20,9 @@ ui <- fluidPage(
                   choices = c("difference", "similarity"), selected = "difference"),
       selectInput("method", label = "Choose whether you are interested testing difference or similarity",
                   choices = c("twoAFC", "threeAFC", "tetrad", "triangle"), selected = "twoAFC"),
-      sliderInput("alpha", label = "False postivity rate", min = 0.01, max = 0.2, value = 0.05, ticks = FALSE),
-      sliderInput("obs.d.prime", label = "Observed Effect Size (d`)", min = 0.0, max = 4, value = 1, ticks = FALSE),
-      sliderInput("test.d.prime", label = "Acceptible Effect Size (d`)", min = 0.0, max = 4, value = 0, ticks = FALSE),
+      sliderInput("alpha", label = "False postivity rate", min = 0.01, max = 0.2, step = 0.01, value = 0.05, ticks = FALSE),
+      sliderInput("obs.d.prime", label = "Observed Effect Size (d`)", min = 0.0, max = 4.0, step = 0.1, value = 1.0, ticks = FALSE),
+      sliderInput("test.d.prime", label = "Acceptible Effect Size (d`)", min = 0.0, max = 4.0, step = 0.1, value = 0.0, ticks = FALSE),
       sliderInput("n", label = "Sample Size", min = 1, max = 1000, value = 100, ticks = FALSE),
       textOutput("power")
     )
